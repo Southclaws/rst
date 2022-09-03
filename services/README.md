@@ -1,0 +1,3 @@
+# services
+
+Each service should be designed to do one job. Or close enough. A service should probably be exported as an interface to facilitate mocking though I've found that mocking services leads to confusion and started to advocate against it. Your services are your business logic. You can't "mock" business logic. It's the implementation of your product. So don't mock them. Also, interfaces are generally more useful when defined at the site of consumption rather than production (meaning, define your interface with the exact required methods in the dependent package. Or just use dependency injection and forget about it 🤷)
